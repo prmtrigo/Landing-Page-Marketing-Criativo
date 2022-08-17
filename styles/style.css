@@ -1,6 +1,21 @@
+
+:root{
+    --body-bg: rgb(34, 34, 34);
+    --body-color: white;
+    --purple-btn: rgb(132, 14, 201);
+    --purple-bn-hover: rgb(145, 38, 207);
+}
+
+.light-mode:root{
+    --body-bg: rgb(196, 188, 188);
+    --body-color: rgb(34, 34, 34);
+    --purple-btn: rgb(132, 14, 201);
+    --purple-btn-hover: rgb(145, 38, 207);
+}
+
 body{
-    background-color: rgb(34, 34, 34);
-    color: white;
+    background-color: var(--body-bg);
+    color: var(--body-color);
     font-family: poppinsregular;
     max-width: 1200px;
     margin: 0 auto;
@@ -9,4 +24,116 @@ body{
 
 header{
     display: flex;
+    flex-direction: row;
+    justify-content: space-between; /*space between the elements!*/
+    align-items: center;
+}
+
+#criativo{
+    color: var(--purple-btn);
+}
+
+#title{
+    flex-direction: column;
+    line-height: 10px;
+}
+
+li{
+    display: inline-block;
+    margin: 20px;
+}
+
+a{
+    color: var(--body-color);
+    transition: 0.3s all;
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--purple-btn);
+    cursor: pointer;
+}
+
+#subscribe-btn{
+    border: 2px solid var(--purple-btn);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#subscribe-btn.light-mode{
+    border: none;
+    background-color: var(--purple-btn);
+    color: white;
+}
+
+#subscribe-btn:hover{
+    background-color: var(--purple-btn);
+    color: var(--body-color);
+}
+
+#subscribe-btn.light-mode:hover{
+    background-color: var(--purple-btn-hover);
+    color:white
+}
+
+h1{
+    font-weight: 100;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+h2{
+    font-size: 56px;
+    line-height: 10px;
+    font-family: poppinsmedium;
+}
+
+span{
+    color: var(--purple-btn);
+}
+
+p{
+    line-height: 20px;
+    max-width: 500px;
+    font-family: poppinslight;
+}
+
+img{
+    width: 600px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+form [type="submit"]{
+    height: 50px;
+    width: 50%;
+    background-color: var(--purple-btn);
+    color: var(--body-color);
+    font-weight: bold;
+}
+
+form [type="submit"]{
+    color: white
+}
+
+form [type="submit"]:hover{
+    background-color: var(--purple-btn-hover);
+    cursor: pointer;
+}
+
+input{
+    margin-top: 20px;
+    height: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
 }
